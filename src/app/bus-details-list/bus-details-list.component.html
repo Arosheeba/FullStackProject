@@ -1,0 +1,73 @@
+<head>
+    <link rel="stylesheet" href="bus-details-list.component.css">
+   </head>
+   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bus-details-list.component.css">
+    
+</head>
+   <div class="banner">  
+    <div class="navbar">
+      
+      <ul>
+       <li><a href="busDetails">Bus Details List</a></li>
+       <li><a href="create-bus-details">Add New Bus Details</a></li>
+       <li><a  href="app-homepage">Home</a></li> 
+       <li><a href="app-logout-form">LogOut</a></li>
+       <li><button class="btn btn-light" type="button" (click) = "fetchAcBus()">Fetch Ac Bus</button></li>
+      <li><button class="btn btn-light" type="button" (click) = "fetchNonAcBus()">
+        Fetch NonAc Bus
+      </button></li>
+      </ul>
+    </div>
+   <div class="list row">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search by StartingPoint" [(ngModel)]="startingPoint"/>
+        </div>
+        <div class="input-group=append">
+            <button class="btn btn-warning" type="button" (click)="searchBystartingPoint()">Search</button>
+        </div>
+    </div>
+   </div>
+   <!---here we see the busDetails list and we want to update , delete and view the busDetailslist &
+    we want to be aware if we want to  delete , all the records can't fetch the database again -->
+    <table class = "table table-striped">
+
+    <thead>
+        <tr>
+            <th> Starting Point</th>
+            <th> Ending Point</th>
+            <th> Driver Name </th>
+            <th> Driver Number</th>
+            <th> Bus Number</th>
+            <th> Bus Type</th>
+            <th> Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let bus of busDetails" >
+            <td> {{ bus.startingPoint}} </td>
+            <td> {{ bus.endingPoint}} </td>
+            <td> {{ bus.driverName }} </td>
+            <td> {{ bus.driverNumber}} </td>
+            <td> {{ bus.busNumber }} </td>
+            <td> {{ bus.busType }} </td>
+            <td>
+                <button (click) = "updateBusDetails(bus.busId)" class = "btn btn-outline-success"> Update</button>
+                <button (click) = "confirmDelete(bus)" class = "btn btn-outline-primary" style="margin-left: 10px"> Delete</button>
+                <button (click) = "BusDetails(bus.busId)" class = "btn btn-outline-success" style="margin-left: 10px"> View</button>
+                <button (click) = "bookTickets(bus)" class = "btn btn-outline-info" style="margin-left: 10px"> Book Tickets</button>
+            </td>
+        </tr>
+        <tr *ngIf="busDetails.length !== 0">
+            <button class = "m-3 btn btn-sm btn-danger" (click) ="confirmDeleteAll()" type="submit">Remove All</button>
+        </tr>
+        <tr scope="row" *ngIf="busDetails.length === 0">
+            <td colspan="4" class="text-center">No record found</td>
+
+        </tr>
+    </tbody>
+</table>

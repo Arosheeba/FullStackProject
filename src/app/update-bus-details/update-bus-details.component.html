@@ -1,0 +1,49 @@
+<!--here we are updating the bus details for all attributes by two way binding-->
+
+<div class="col-md-6 offset-md-3">
+    <h3> Update BusDetails </h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+            <label>Starting Point</label>
+            <input type="text" placeholder="Enter Starting Point" class ="form-control" id = "startingPoint"
+                [(ngModel)] = "busDetails.startingPoint" name = "startingPoint">
+        </div>
+        <div class="form-group">
+            <label> Ending Point</label>
+            <input type="text" placeholder="Enter Ending Point" class ="form-control" id = "endingPoint"
+                [(ngModel)] = "busDetails.endingPoint" name = "endingPoint">
+        </div>
+
+        <div class="form-group">
+            <label>Driver Name</label>
+            <input type="text" placeholder="Enter Driver Name" class ="form-control" id = "driverName"
+                [(ngModel)] = "busDetails.driverName" name = "driverName">
+        </div>
+
+       
+        <div class="form-group">
+            <label> Driver Number</label>
+            <input type="text" placeholder="Enter Driver Number" class ="form-control" id = "driverNumber"
+                [(ngModel)] = "busDetails.driverNumber" name = "driverNumber">
+        </div>
+        <div class="form-group">
+            <label>Bus Id</label>
+            <input type="text" placeholder="Enter Bus Id" class ="form-control" id = "busId"
+                [(ngModel)] = "busDetails.busId" name = "busId">
+        </div>
+        <div class="form-group">
+            <label> Bus Number</label>
+            <input type="text" placeholder="Enter Bus Number" class ="form-control" id = "busNumber"
+                [(ngModel)] = "busDetails.busNumber" name = "busNumber">
+        </div>
+        <div class="form-group">
+            <label> Bus Type</label>
+            <input type="text" placeholder="Enter  Bus Type " class ="form-control" id = "busType"
+                [(ngModel)] = "busDetails.busType" name = "busType">
+        </div>
+
+        <button class = "btn btn-success" type ="submit" (click)= "update()">Submit</button>
+
+    </form>
+    </div> 

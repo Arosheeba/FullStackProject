@@ -1,0 +1,48 @@
+<!-- Here we are creating the Homepage-->
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------<title> Website Layout</title>------>
+    <link rel="stylesheet" href="homepage.component.css">
+    <link rel="stylesheet" href="https://www.wanderu.com/bus-travel-review/wp-content/uploads/2015/11/luxbus-luxury-bus-travel.png"/>
+   </head>
+<body>
+  <section> </section>
+  <nav>
+    <div class="menu">
+      
+      <div class="logo"   >
+        <!--<a src="https://thumbs.dreamstime.com/b/bus-ticket-booking-logo-design-tour-vector-coach-logotype-160226482.jpg" >
+          <link rel="icon" type="image/gif" href="https://logodix.com/logo/1809423.png">--> 
+        <a src="https://logodix.com/logo/1809423.png" sizes="32x32" >~ Ready To Ride ~</a>
+
+      </div>
+      
+      <ul>
+        <li><a href="app-profile-card">ProfileCard</a></li>
+       <li><a href="app-about-us">AboutUs</a></li>
+        <li><a href="app-contact-us-form">ContactUs</a></li>
+        <li><a href="app-feedback-form">Feedback</a></li>
+        
+        <li><a (click)="confirmLogout()" href="app-logout-form">LogOut</a></li>
+      </ul>
+      
+    </div>
+  </nav>
+  <div class="img"><img src="\assets\img\homepageimg.jpg"></div>
+
+  <div class="center">
+    
+    <div class="title">Welcome to GO Bus</div>
+    <div class="sub_title">Explore All !!!</div>
+    <div class="btns">
+    
+      <button ><a href="busDetails" style="color: #51074a;"><b>Learn More</b></a></button>
+      <button (click)="subscribe()">Subscribe</button>
+    </div>
+  </div>
+</body>
+</html>

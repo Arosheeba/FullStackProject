@@ -1,0 +1,41 @@
+.gradient-custom-3 {
+    /* fallback for old browsers */
+    background: #84fab0;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right,  rgba(232, 64, 198, 0.5), rgba(170, 38, 153, 0.5), rgb(153, 17, 98));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(232, 64, 198, 0.5), rgba(170, 38, 153, 0.5), rgb(153, 17, 98))
+    }
+    .gradient-custom-4 {
+    /* fallback for old browsers */
+    background: #84fab0;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(87, 64, 232, 0.5), rgba(127, 162, 242, 0.5), rgb(6, 19, 59));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(87, 64, 232, 0.5), rgba(127, 162, 242, 0.5), rgb(6, 19, 59))
+    }
+    img{
+        background-repeat:  repeat;
+        background-size: auto;
+        
+    }
+    table{
+        width: 100cap;
+        height: fit-content;
+    }
+    #nameError {
+        display: none;
+        font-size: 0.8em;
+      }
+      
+      #nameError.visible {
+        display: block;
+      }
+      
+      input.invalid {
+        border-color: red;
+      }

@@ -1,0 +1,30 @@
+div{
+    background: linear-gradient(to right, rgba(232, 64, 198, 0.5), rgb(153, 17, 98));
+}
+p{
+    font-size: large;
+    font-style: oblique;
+    color: darkmagenta;
+  }
+  h2{
+    font-style: calc();
+    color: brown;
+
+  }
+  button.cta {
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 16px;
+    margin-top: 32px;
+    background: #21d4fd;
+    background-size: 300% 100%;
+    font-size: 1.4em;
+    transition: background-position 0.7s;
+}
+
+button.cta:hover {
+    background-position: 100% 0;
+}

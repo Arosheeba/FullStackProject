@@ -1,0 +1,14 @@
+div{
+    background: linear-gradient(to right, rgba(232, 64, 198, 0.5), rgb(153, 17, 98));
+}
+label{
+    font-size: large;
+    font-style: oblique;
+    color: darkmagenta;
+  }
+  h3{
+    font-style: calc();
+    color: brown;
+
+  }
+ 

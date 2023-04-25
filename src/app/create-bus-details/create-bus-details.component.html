@@ -1,0 +1,55 @@
+<!-- Here we are creating the Bus details-->
+<div class="col-md-6 offset-md-3">
+    <h3> Create BusDetails </h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+            <label> StartingPoint</label>
+            <input type="text"   class ="form-control" id = "startingPoint" placeholder="Enter StartingPoint "
+                [(ngModel)] = "busDetails.startingPoint" name = "startingPoint">
+        </div>
+        <div class="form-group">
+            <label> EndingPoint</label>
+            <input type="text"  class ="form-control" id = "endingPoint" placeholder="Enter EndingPoint" 
+                [(ngModel)] = "busDetails.endingPoint" name = "endingPoint">
+        </div>
+        <div class="form-group">
+            <label> DriverName</label>
+            <input type="text"   class ="form-control" id = "driverName" placeholder="Enter DriverName"
+                [(ngModel)] = "busDetails.driverName" name = "driverName">
+        </div>
+
+        
+        <div class="form-group">
+            <label> DriverNumber</label>
+            <input type="text"   class ="form-control" id = "driverNumber" placeholder="Enter DriverNumber"
+                [(ngModel)] = "busDetails.driverNumber" name = "driverNumber">
+        </div>
+       
+        <div class="form-group">
+            <label> BusNumber</label>
+            <input type="text"   class ="form-control" id = "busNumber"placeholder="Enter BusNumber"
+                [(ngModel)] = "busDetails.busNumber" name = "busNumber">
+        </div>
+        <div class="form-group">
+            <label> BusType</label>
+            <input type="text"   class ="form-control" id = " busType"placeholder="Enter BusType"
+                [(ngModel)] = "busDetails.busType" name = "busType">
+        </div> 
+        <div class="form-group">
+            <label>Number of Seats</label>
+            <input type="text"  class ="form-control" id = "noOfSeats" placeholder="Enter Number of Seats"
+                [(ngModel)] = "busDetails.noOfSeats" name = "noOfSeats">
+        </div>
+        <div class="form-group">
+            <label>Cost Per Seats</label>
+            <input type="text" class ="form-control" id = "costPerSeats" placeholder="Enter Single Seat cost"
+                [(ngModel)] = "busDetails.costPerSeats" name = "costPerSeats">
+        </div>
+     
+       
+
+        <button class = "btn btn-success" type="submit" (click)="create()" >Submit</button>
+<!--(click)="onSubmit()" (click)="confirmCreate()" -->
+    </form>
+    </div> 
